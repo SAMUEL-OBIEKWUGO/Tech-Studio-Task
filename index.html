@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="/index.css">
-    <title>Tech Studio Academy | python Full stack Web Development</title>
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <nav class="container navbar">
-        <div class="branding">
-          <img src="./asset/logo 2.svg" alt="" class="logo" />
-          <div class="branding-title">
-            <h4>Techstudio Academy</h4>
-            <p>A strategic Dots Digital solutions company</p>
-          </div>
-        </div>
-        <ul class="nav-items">
-          <li><a href="#">Download package</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Register</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- End of header -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tech Studio Academy — Python Full Stack Web Development immersive bootcamp." />
+  <link rel="stylesheet" href="style.css">
+  <title>Tech Studio Academy | Python Full Stack Web Development</title>
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <!-- Hero section -->
-    <main class="ssss">
+  <!-- ==================== HEADER SECTION ==================== -->
+  <header>
+    <nav class="container navbar">
+      <!-- Branding / Logo Area -->
+      <div class="branding">
+        <img src="./asset/logo 2.svg" alt="Tech Studio Academy logo" class="logo" />
+        <div class="branding-title">
+          <h4>Techstudio Academy</h4>
+          <p>A strategic Dots Digital solutions company</p>
+        </div>
+      </div>
+      
+      <!-- Navigation Menu -->
+      <ul class="nav-items">
+        <li><a href="#">Download package</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content">
+    
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section">
       <div class="container">
         <div class="hero">
+          <!-- Hero Left Content -->
           <div class="inner-main">
             <h1 class="first-header">
               Python Full Stack Web Development <br />
               Immersive
             </h1>
+            
             <p class="hero-sub-heading">
-              Explore the fastest,most effective way to instantly grow your
+              Explore the fastest, most effective way to instantly grow your
               skills, to transform yourself and get ready to be hired as a
               highly paid web developer.
             </p>
+            
+            <!-- Enrolment Details -->
             <div class="hero-details">
               <h2 class="hero-details-heading">Enrolment Details</h2>
               <div class="enrolment-info">
@@ -55,47 +68,47 @@
                     <p>Duration</p>
                   </div>
                 </div>
+                
                 <div class="enrolment-details">
-                  <p>Palmgroove,Lagos</p>
+                  <p>Palmgroove, Lagos</p>
                   <p>03/04/2023</p>
-                  <p>24weeks</p>
+                  <p>24 weeks</p>
                 </div>
               </div>
             </div>
           </div>
+          
+          <!-- Registration Form -->
           <div class="form">
             <h1 class="head-form">
               Register to learn more about the program pricing and curriculum
             </h1>
-            <form asction="" class="form-1">
-              <div>
-                <input type="text" name="" placeholder="first name" />
-                <input type="text" name="" placeholder="last name" />
-              </div>
-              <input type="email" name="email" id="Email" placeholder="email" />
-              <input
-                type="number"
-                name="phone-number"
-                id="phone-number"
-                placeholder="phone-number"
-              />
-              <a href="#">Get Program Package</a>
-              <span> <i class="la la-whatsapp"></i></span>
-            </form>
             
+            <form action="#" class="form-1" novalidate>
+              <div class="name-row">
+                <input type="text" name="first_name" placeholder="First name" aria-label="First name" />
+                <input type="text" name="last_name" placeholder="Last name" aria-label="Last name" />
+              </div>
+              
+              <input type="email" name="email" id="Email" placeholder="Email" aria-label="Email" required />
+              <input type="tel" name="phone_number" id="phone-number" placeholder="Phone number" aria-label="Phone number" />
+              
+              <button type="submit" class="btn primary-btn">Get Program Package</button>
+            </form>
           </div>
         </div>
       </div>
-    </main>
-    <!-- End of Hero section -->
+    </section>
 
-    <!-- testimonial section -->
+    <!-- ==================== TESTIMONIAL SECTION ==================== -->
     <section id="testimonial">
       <div class="container">
         <div class="testimonial">
+          <!-- Testimonial Box 1 - Two Column Layout -->
           <div class="testimonial-box1">
+            <!-- Joseph's Testimonial -->
             <div class="testimonial-content joseph">
-              <img src="./asset/joseph_avatar.jpg" alt="" />
+              <img src="./asset/joseph_avatar.jpg" alt="Photo of Joseph Daramola" />
               <p>
                 I came into Tech Studio Academy with practically no prior
                 knowledge in software development. However, within a few weeks,
@@ -107,13 +120,15 @@
                 push in my career as a software developer.
               </p>
               <p class="details">
-                <span class="name">Joseph Daramola</span>(Frontend Developer)
+                <span class="name">Joseph Daramola</span> (Frontend Developer)
                 <br />
                 <span class="color">-Friyay.io</span>
               </p>
             </div>
+            
+            <!-- Peter's Testimonial -->
             <div class="testimonial-content peter">
-              <img src="./asset/peter_avatar.jpg" alt="" />
+              <img src="./asset/peter_avatar.jpg" alt="Photo of Peter Edeawe" />
               <p>
                 Tech Studio Academy has been one of the big push I needed to get
                 in the real world space. I had an immense learning that was
@@ -124,15 +139,18 @@
               </p>
               <p>Thank you Tech Studio for that push I needed.</p>
               <p class="details">
-                <span class="name">Peter Edeawe</span>(Software Developer)
+                <span class="name">Peter Edeawe</span> (Software Developer)
                 <br />
                 <span class="color">-Breathagency.com</span>
               </p>
             </div>
           </div>
+          
+          <!-- Testimonial Box 2 - Single Column -->
           <div class="testimonial-box2">
+            <!-- Rilwan's Testimonial -->
             <div class="testimonial-content rilwan">
-              <img src="./asset/rilwan_avatar.jpeg" alt="" />
+              <img src="./asset/rilwan_avatar.jpeg" alt="Photo of Rilwan Ajibola" />
               <p>
                 I bless the day the Instagram algorithm pop up Tech Studio
                 Academy to my news feed. I read through their curriculum and
@@ -145,7 +163,7 @@
                 Consulting, fulfilling my dreams thanks to Tech Studio Academy.
               </p>
               <p class="details">
-                <span class="name">Rilwan Ajibola</span>(Software Developer)
+                <span class="name">Rilwan Ajibola</span> (Software Developer)
                 <br />
                 <span class="color">-Otandtconsulting.com</span>
               </p>
@@ -154,34 +172,38 @@
         </div>
       </div>
     </section>
-    <!-- End of testimonial section -->
 
-    <!-- benefits-->
+    <!-- ==================== BENEFITS SECTION ==================== -->
     <section id="benefits">
       <div class="container">
         <div class="benefits">
+          <!-- Benefit 1 -->
           <div>
-            <img src="./asset/calendar.png" alt="" />
+            <img src="./asset/calendar.png" alt="Calendar icon representing 24-week program" />
             <h2>24-Week Bootcamp</h2>
             <p>
-              In 24 weeks, you’ll be a professional javascri   pt full-stack
+              In 24 weeks, you'll be a professional JavaScript full-stack
               developer, able to build real-time interactive and dynamic
-              applications. We teach the JavaScript language because of it's
-              growing popularity every day and it's here to stay.
+              applications. We teach the JavaScript language because of its
+              growing popularity and stability in modern web development.
             </p>
           </div>
+          
+          <!-- Benefit 2 -->
           <div>
-            <img src="./asset/board.png" alt="" />
+            <img src="./asset/board.png" alt="Chalkboard icon representing learning new skills" />
             <h2>Develop New Skills</h2>
             <p>
-              You'll get your hands dirty by building real life websites,APIs,
-              and data-driven apps to gain confidence and sharpen yours skills.
+              You'll get your hands dirty by building real life websites, APIs,
+              and data-driven apps to gain confidence and sharpen your skills.
               You'll also collaborate with classmates on a range of projects to
               add to your portfolio.
             </p>
           </div>
+          
+          <!-- Benefit 3 -->
           <div>
-            <img src="./asset/suitcase (1).png" alt="" />
+            <img src="./asset/suitcase (1).png" alt="Suitcase icon representing career readiness" />
             <h2>Be An Expert</h2>
             <p>
               You graduate with a valued portfolio required to launch your
@@ -193,18 +215,20 @@
         </div>
       </div>
     </section>
-    <!-- End of benefits section -->
 
-    <!-- overview section -->
-
+    <!-- ==================== OVERVIEW SECTION ==================== -->
     <section id="overview">
       <div class="container">
         <div class="overview">
+          <!-- Section Heading -->
           <div class="overview-heading line-heading">
-            <h2>Become a well round developer</h2>
+            <h2>Become a well rounded developer</h2>
             <div class="line"></div>
           </div>
+          
+          <!-- Overview Content -->
           <div class="overview-content">
+            <!-- Left Column - Text Content -->
             <div class="overview-content1 overview-box">
               <p>
                 We teach the important skills required to jumpstart your career
@@ -214,41 +238,47 @@
                 full-stack web apps. You do all these while learning to solve
                 everyday problems with constructive, well-written
               </p>
+              
               <p>
                 You'll be taught to build smart, data-driven web applications
-                using JavaScript and it's robust React framwork - Next.js. Work
+                using JavaScript and its robust React framework - Next.js. Work
                 with the famous NoSQL database MongoDB to integrate data into
                 your project; connect with other third-party applications using
                 API calls.
               </p>
+              
               <p>
                 And finally, you'll learn the fundamentals of working as a team;
                 collaborate with other group members of the class to build,
                 change, maintain, and secure an application. Track your team
                 development process using Version Control Systems.
               </p>
+              
               <p>Interested in viewing more details on the program?</p>
               <button class="btn primary-btn">Get program package</button>
             </div>
+            
+            <!-- Right Column - Image Content -->
             <div class="overview-content2 overview-box">
               <div class="overview-image">
-                <img src="./asset/group.jpg" alt="" />
+                <img src="./asset/group.jpg" alt="Group of students collaborating in class" />
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- End of overview section -->
 
-    <!-- student journey -->
+    <!-- ==================== STUDENT JOURNEY SECTION ==================== -->
     <section id="journey">
       <div class="container">
         <div class="journey">
           <div class="journey-heading">
-            <h2>student's Experience</h2>
+            <h2>Student's Experience</h2>
+            
             <div class="journey-content">
               <div class="journey-content1">
+                <!-- Introduction Text -->
                 <div class="words">
                   <p>
                     Whether you want to pursue a career as a Web Developer, a
@@ -258,77 +288,72 @@
                     you learn in real-time through project-based work.
                   </p>
                 </div>
+                
+                <!-- Student Image -->
                 <div class="image">
-                  <img src="./asset/students.jpg" alt="">
-
+                  <img src="./asset/students.jpg" alt="Students in classroom">
                 </div>
 
+                <!-- Curriculum Details Grid -->
                 <section class="section-test">
-                    <div class="grid-container">
-                      <div class="grid-50">
-                        <div class="left">
-                          <h2>
-                            Fundamentals
-                          </h2>
-                          <p>
-                            The first weeks of this bootcamp is to help you appreciate the fundamentals of web development, understanding structure, design and getting comfortable coding in HTML and CSS.
-                          </p>
-                          <p class="text-1">
-                            You'll also be introduced to the concepts of Responsive Design - targeting different screen sizes and working with frameworks such as Bootstrap
-                          </p>
-                          <h2>
-                            Frontend Programming
-                          </h2>
-                          <p class="text-2">
-                            After mastering the fundamentals, the focus shifts towards frontend programming. You'll learn to add motion and interactivity to your project with JavaScript & jQuery.
-                          </p>
-                          <h2>
-                            The React Library
-                          </h2>
-                          <p class="text-3">
-                            You'll learn to buid dynamic Single Page Applications using the famous React Library. Render basic React components using JSX and the virtual Document Object Model (DOM).
-                          </p>
-                          <h2>
-                            Version Control
-                          </h2>
-                          <p class="text-4">
-                            You'll learn to use the Git version control system, collaborate with other team members and push your projects to GitHub using Git
-                          </p>
-
-                        </div>
-                      </div>
-                      <div class="grid-50">
-                        <div class="right">
-                           <h2>
-                            Front and Backend Rendering with Next.JS
-                           </h2>
-                           <p class="text-5">
-                            You'll understand the client/server roles in handling HTTP requests and thereafter move to advanced concepts use-d to populate dynamic data to projects
-                           </p>
-                           <p>
-                            You'll learn to use the amazing server-side rendering of NextJS to create database-driven web applications.
-                           </p>
-                           <p>
-                            You'll learn to use components like user authentication, contact forms, content administration, file uploads and a lot more with NextJS to create real-life web applications.
-                           </p>
-                           <h2>
-                            Databases
-                           </h2>
-                           <p>
-                            Modern web applications need querying real-time data for interactivity. You'll spend considerable time learning Next.JS interaction with NoSQL.
-                           </p>
-                           <p class="text-6">
-                            You'll be exposed to querying the database to perform the CRUD functions - Create, Read, Update and Delete resources.
-                           </p>
-                           <h2>
-                            Production Deployment
-                           </h2>
-                           <p>
-                            You'll be taught how to deploy your production ready project to a public web server to be accessed by everyone in the online community.
-                          </p>
-                        </div>
+                  <div class="grid-container">
+                    <!-- Left Grid - Fundamentals, Frontend, React, Version Control -->
+                    <div class="grid-50">
+                      <div class="left">
+                        <h2>Fundamentals</h2>
+                        <p>
+                          The first weeks of this bootcamp is to help you appreciate the fundamentals of web development, understanding structure, design and getting comfortable coding in HTML and CSS.
+                        </p>
+                        <p class="text-1">
+                          You'll also be introduced to the concepts of Responsive Design - targeting different screen sizes and working with frameworks such as Bootstrap
+                        </p>
+                        
+                        <h2>Frontend Programming</h2>
+                        <p class="text-2">
+                          After mastering the fundamentals, the focus shifts towards frontend programming. You'll learn to add motion and interactivity to your project with JavaScript & jQuery.
+                        </p>
+                        
+                        <h2>The React Library</h2>
+                        <p class="text-3">
+                          You'll learn to build dynamic Single Page Applications using the famous React Library. Render basic React components using JSX and the virtual Document Object Model (DOM).
+                        </p>
+                        
+                        <h2>Version Control</h2>
+                        <p class="text-4">
+                          You'll learn to use the Git version control system, collaborate with other team members and push your projects to GitHub using Git
+                        </p>
                       </div>
                     </div>
+                    
+                    <!-- Right Grid - Next.JS, Databases, Deployment -->
+                    <div class="grid-50">
+                      <div class="right">
+                        <h2>Front and Backend Rendering with Next.JS</h2>
+                        <p class="text-5">
+                          You'll understand the client/server roles in handling HTTP requests and thereafter move to advanced concepts used to populate dynamic data to projects
+                        </p>
+                        <p>
+                          You'll learn to use the amazing server-side rendering of NextJS to create database-driven web applications.
+                        </p>
+                        <p>
+                          You'll learn to use components like user authentication, contact forms, content administration, file uploads and a lot more with NextJS to create real-life web applications.
+                        </p>
+                        
+                        <h2>Databases</h2>
+                        <p>
+                          Modern web applications need querying real-time data for interactivity. You'll spend considerable time learning Next.JS interaction with NoSQL.
+                        </p>
+                        <p class="text-6">
+                          You'll be exposed to querying the database to perform the CRUD functions - Create, Read, Update and Delete resources.
+                        </p>
+                        
+                        <h2>Production Deployment</h2>
+                        <p>
+                          You'll be taught how to deploy your production ready project to a public web server to be accessed by everyone in the online community.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </section>
               </div>
             </div>
@@ -337,85 +362,163 @@
       </div>
     </section>
 
-    <!-- the facility section -->
-
+    <!-- ==================== FACILITY SECTION ==================== -->
     <section id="Facility">
       <div class="container">
         <div class="facility">
+          <!-- Section Heading -->
           <div class="facility-heading line-heading">
-            
             <h2>A State-Of-The-Art Facility</h2>
             <div class="line"></div>
-
-          </div>
-          <div class="yung">
-            <img src="./asset/studio.png" alt="">
-            <div class="glory">
-              <h2>A world-class learning facility</h2>
-              <p>Our learning studio is designed to inspire focused learning, creativity and collaboration. It is equiped with state-of-the-art learning equipments with no more than 10 students per class.</p>
-    
-              <p>Learn in an environment that puts you in direct contact with professional web developers and software engineer.</p>
-    
-              <p>You'll be provided with constant power and internet supply to make you focus on the job at hand</p>
-           
-            <div class="power">
-              <h2>Learn At A World Class Facility</h2>
-             <p> <a href="#">Register for the program</a> to learn at the top learning facility in Lagos</p>
-            
-    
-            </div>
-          </div>
-    
-
           </div>
           
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- why choose tech studio academy -->
-
-    <section class="section-reason">
-      <div class="container">
-        <div class="grid-50">
-          <div class="left">
-            <div class="why"> 
-              <img src="./asset/students_pic.jpeg" alt="">
-            </div>
-        </div>
-      </div>
-      <div class="grid-50">
-        <div class="right">
-          <div class="reason-heading line-heading">
-            <h2>Why choose Tech Studio Academy?</h2>
-            <div class="line"></div>
-            <div class="reason-content">
-              <div class="reason-content1 reason-box">
-                <p>Tech Studio Academy is a top-rated tech academy in Lagos. In the last 3 years, we've trained hundreds of students - both online and physical - and helped them to navigate and forge their paths in the tech industry.</p>
-
-                <p>With our career guidance and thorough assistance, some of our students are working with top organizations in the country and beyond. If you're looking to advance your career in the tech industry, we'll help fulfill your dream.</p>
-
+          <!-- Facility Content -->
+          <div class="yung">
+            <img src="./asset/studio.png" alt="Tech Studio Academy learning facility">
+            
+            <div class="glory">
+              <h2>A world-class learning facility</h2>
+              <p>Our learning studio is designed to inspire focused learning, creativity and collaboration. It is equipped with state-of-the-art learning equipment with no more than 10 students per class.</p>
+              <p>Learn in an environment that puts you in direct contact with professional web developers and software engineers.</p>
+              <p>You'll be provided with constant power and internet supply to make you focus on the job at hand</p>
               
-              <p>Though there's not enough reasons why we're the best tech training school around, but here are a couple:</p>
-              <li>
-                <p>We provide you with the best learning facility you can lay your eyes on. All our classes are en-suite and equipped with the latest technologies for learning.</p>
-              </li>
-              <li>
-                <p>Our tutors are highly trained professionals that are choosen based on industry experience and teaching ability.</p>
-              </li>
-              <li>
-                <p>
-                  We offer you the best support - either while you're learning or after you've graduated. We provide career support to get you hired in no time.
-                </p>
-              </li>
+              <div class="power">
+                <h2>Learn At A World Class Facility</h2>
+                <p><a href="#">Register for the program</a> to learn at the top learning facility in Lagos</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div> 
-      </div> 
       </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US SECTION ==================== -->
+    <section class="section-reason">
+      <div class="container">
+        <div class="reason-grid">
+          <!-- Left Column: Image -->
+          <div class="reason-image">
+            <img src="./asset/students_pic.jpeg" alt="Students at Tech Studio Academy">
+          </div>
+          
+          <!-- Right Column: Content -->
+          <div class="reason-content">
+            <div class="reason-heading">
+              <h2>Why choose Tech Studio Academy?</h2>
+              <div class="line"></div>
+            </div>
+            
+            <p class="reason-text">
+              Tech Studio Academy is a top-rated tech academy in Lagos. In the last 3 years, we've trained hundreds of students - both online and physical - and helped them to navigate and forge their paths in the tech industry.
+            </p>
+            
+            <p class="reason-text">
+              With our career guidance and thorough assistance, some of our students are working with top organizations in the country and beyond. If you're looking to advance your career in the tech industry, we'll help fulfill your dream.
+            </p>
+            
+            <p class="reason-text">
+              Though there's not enough reasons why we're the best tech training school around, but here are a couple:
+            </p>
+          </div>
+        </div>
       </div>
-  </body>
+    </section>
+
+    <!-- ==================== CAREER SUPPORT SECTION ==================== -->
+    <section class="career">
+      <div class="container">
+        <h2 class="support">Career Support</h2>
+        <div class="line"></div>
+        
+        <p class="program">
+          As a student of this program, you'll be provided with access to career readiness tools, resources and trainings, connections to employers, and opportunities to sharpen your skills.
+        </p>
+        
+        <div class="career-grid">
+          <!-- Left Column - Image -->
+          <div class="career-image">
+            <img src="./asset/smile.jpg" alt="Happy student">
+          </div>
+          
+          <!-- Right Column - Career Support Details -->
+          <div class="career-content">
+            <h3>Get excellent career guidance from industries' best</h3>
+            <p>
+              Our support team provides students with guidance and tips on building a top-notch portfolio that woos employers. Tech Studio Academy is always reaching out to employers picking resumes and arranging interviews for our students. You gain access to networking opportunities and foster connections within the industry. Through our partnerships, you'll meet and have access to Hiring Managers across different companies.
+            </p>
+            <p class="register-text">Register To Get The Complete Course Package</p>
+            <button class="btn primary-btn">Get program package</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER SECTION ==================== -->
+    <footer class="footer">
+      <div class="container">
+        <!-- Main Footer Content -->
+        <div class="footer-grid">
+          <!-- Column 1: Company Info -->
+          <div class="footer-col">
+            <h3 class="footer-title">Tech Studio Academy</h3>
+            <address class="footer-address">
+              1, Ogunlesi Street, Awoyokun Bus Stop,<br>
+              Onipanu, Lagos
+            </address>
+          </div>
+
+          <!-- Column 2: Courses -->
+          <div class="footer-col">
+            <h3 class="footer-title">Courses</h3>
+            <ul class="footer-links">
+              <li><a href="#">Data Analysis With Machine Learning</a></li>
+              <li><a href="#">Cyber Security</a></li>
+              <li><a href="#">Fullstack Development</a></li>
+              <li><a href="#">Fullstack Development Online</a></li>
+              <li><a href="#">Product Design UI-UX</a></li>
+              <li><a href="#">Product Design UI-UX Online</a></li>
+              <li><a href="#">Data Analysis With Machine Learning Online</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: About Us -->
+          <div class="footer-col">
+            <h3 class="footer-title">About Us</h3>
+            <ul class="footer-links">
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Newsletter -->
+          <div class="footer-col">
+            <h3 class="footer-title">Subscribe to our newsletter</h3>
+            <form class="newsletter-form">
+              <input 
+                type="email" 
+                placeholder="Enter Your Email Address" 
+                aria-label="Email for newsletter"
+                required
+              >
+              <button type="submit" class="btn-submit">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&copy; 2026 TechStudio Academy. All rights reserved.</p>
+          </div>
+          <div class="footer-bottom-links">
+            <a href="#">Terms and Policy</a>
+            <span class="separator">|</span>
+            <a href="#">in</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
 </html>

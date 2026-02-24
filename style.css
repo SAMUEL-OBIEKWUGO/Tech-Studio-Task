@@ -1,0 +1,974 @@
+/* ========================================
+   TABLE OF CONTENTS
+   ========================================
+   
+   1. CSS Variables & Root Settings
+   2. Reset & Base Styles
+   3. Layout & Container
+   4. Accessibility
+   5. Navigation
+   6. Hero Section
+   7. Forms
+   8. Testimonials
+   9. Benefits
+   10. Overview Section
+   11. Student Journey / Curriculum
+   12. Facility Section
+   13. Why Choose Us
+   14. Career Support
+   15. Footer Section
+   16. Utility Classes
+   17. Media Queries
+   
+   ======================================== */
+
+/* ========================================
+   1. CSS VARIABLES & ROOT SETTINGS
+   ======================================== */
+:root {
+  /* Colors */
+  --color-primary: #007bff;
+  --color-primary-hover: #0056b3;
+  --color-accent: #dc3545;
+  --text-primary: #222;
+  --text-muted: #6c757d;
+  --text-light: #e6e6e6;
+  --bg-primary: #fff;
+  --bg-light: #fafafa;
+  --bg-testimonial: #f8f9fb;
+  --border-color: #ddd;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 2.5rem;
+  --spacing-xxxl: 3rem;
+  --spacing-xxxxl: 4rem;
+  
+  /* Typography */
+  --font-primary: Inter, Arial, Helvetica, sans-serif;
+  --font-secondary: Georgia, "Times New Roman", Times, serif;
+  --font-size-sm: 0.85rem;
+  --font-size-base: 0.95rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.05rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+  --font-size-xxxl: 2.5rem;
+  
+  /* Layout */
+  --container-max: 1200px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  
+  /* Shadows */
+  --shadow-card: 0 6px 18px rgba(0, 0, 0, 0.08);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+
+  /* Footer Colors */
+  --footer-bg: #1a1a1a;
+  --footer-text: #ffffff;
+  --footer-text-muted: #b0b0b0;
+  --footer-border: #333;
+  --footer-input-bg: #2a2a2a;
+}
+
+/* ========================================
+   2. RESET & BASE STYLES
+   ======================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+  background: var(--bg-light);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ========================================
+   3. LAYOUT & CONTAINER
+   ======================================== */
+.container {
+  width: 90%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* ========================================
+   4. ACCESSIBILITY
+   ======================================== */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: #000;
+  color: #fff;
+  margin: var(--spacing-md);
+}
+
+/* ========================================
+   5. NAVIGATION
+   ======================================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) 0;
+  background: var(--bg-primary);
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.logo {
+  width: 56px;
+  height: auto;
+}
+
+.branding-title h4 {
+  font-size: var(--font-size-md);
+  margin-bottom: 0;
+}
+
+.branding-title p {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+.nav-items {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.nav-items a {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* ========================================
+   6. HERO SECTION
+   ======================================== */
+.hero-section {
+  background-image: url("./asset/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: var(--spacing-xxxxl) 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: flex-start;
+}
+
+.inner-main {
+  flex: 1;
+}
+
+.first-header {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero-sub-heading {
+  color: var(--text-light);
+  font-size: var(--font-size-lg);
+  max-width: 54ch;
+}
+
+/* Enrollment card */
+.hero-details {
+  margin-top: var(--spacing-lg);
+}
+
+.hero-details-heading {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-xs);
+}
+
+.enrolment-info {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.enrolment-info p {
+  margin: 0;
+  color: #fff;
+}
+
+/* ========================================
+   7. FORMS
+   ======================================== */
+.form {
+  background: var(--bg-primary);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  width: 100%;
+  max-width: 420px;
+  color: var(--text-primary);
+}
+
+.form .head-form {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-1 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.form-1 .name-row {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.form-1 input {
+  padding: 0.65rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-base);
+  width: 100%;
+}
+
+.form-1 input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  transition: background-color var(--transition-fast);
+}
+
+.primary-btn {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: var(--color-primary-hover);
+  text-decoration: none;
+}
+
+/* ========================================
+   8. TESTIMONIALS
+   ======================================== */
+#testimonial {
+  padding: var(--spacing-xxl) 0;
+  background: var(--bg-primary);
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.testimonial-box1 {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.testimonial-content {
+  flex: 1;
+  min-width: 240px;
+  text-align: left;
+  background: var(--bg-testimonial);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+}
+
+.testimonial-content img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--spacing-xs);
+}
+
+.testimonial-content .details {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+.testimonial-content .name {
+  font-weight: 600;
+}
+
+/* ========================================
+   9. BENEFITS
+   ======================================== */
+#benefits {
+  padding: var(--spacing-xl) 0;
+}
+
+.benefits {
+  display: flex;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.benefits > div {
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+  padding: var(--spacing-md);
+}
+
+/* ========================================
+   10. OVERVIEW SECTION
+   ======================================== */
+#overview {
+  padding: var(--spacing-xl) 0;
+}
+
+.overview-content {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.overview-box {
+  flex: 1;
+}
+
+/* ========================================
+   11. STUDENT JOURNEY / CURRICULUM
+   ======================================== */
+.section-test {
+  font-family: var(--font-secondary);
+  margin-top: var(--spacing-xl);
+}
+
+.section-test h2 {
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.section-test p {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-md);
+}
+
+.grid-container {
+  display: flex;
+  gap: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.grid-50 {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* ========================================
+   12. FACILITY SECTION
+   ======================================== */
+.facility {
+  padding: var(--spacing-xl) 0;
+}
+
+.facility .facility-content {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: flex-start;
+  margin-top: var(--spacing-xl);
+}
+
+.facility .facility-image {
+  flex: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.facility .facility-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.facility-text {
+  flex: 1;
+  background: var(--bg-primary);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.facility-text h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.facility-text p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.7;
+}
+
+.facility-text .power {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+.facility-text .power a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.facility-text .power a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   13. WHY CHOOSE US SECTION
+   ======================================== */
+.section-reason {
+  padding: var(--spacing-xxxxl) 0;
+  background: var(--bg-light);
+}
+
+.reason-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xxxl);
+  align-items: center;
+}
+
+.reason-image {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.reason-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-normal);
+}
+
+.reason-image img:hover {
+  transform: scale(1.02);
+}
+
+.reason-content {
+  padding: var(--spacing-md);
+}
+
+.reason-heading {
+  margin-bottom: var(--spacing-lg);
+}
+
+.reason-heading h2 {
+  font-size: var(--font-size-xxxl);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.reason-heading .line {
+  width: 80px;
+  height: 4px;
+  background: var(--color-primary);
+  margin: 0;
+}
+
+.reason-text {
+  font-size: var(--font-size-md);
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.reason-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   14. CAREER SUPPORT SECTION
+   ======================================== */
+.career {
+  padding: var(--spacing-xxxxl) 0;
+  background: var(--bg-primary);
+}
+
+.career h2.support {
+  text-align: center;
+  font-size: var(--font-size-xxxl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.career .line {
+  margin: 0 auto var(--spacing-lg);
+}
+
+.career .program {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xxxl);
+  font-size: var(--font-size-lg);
+  color: var(--text-muted);
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xxxl);
+  align-items: center;
+}
+
+.career-image {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.career-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-normal);
+}
+
+.career-image img:hover {
+  transform: scale(1.02);
+}
+
+.career-content {
+  padding: var(--spacing-md);
+}
+
+.career-content h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+}
+
+.career-content p {
+  font-size: var(--font-size-md);
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.career-content .register-text {
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ========================================
+   15. FOOTER SECTION
+   ======================================== */
+.footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  padding: var(--spacing-xxxl) 0 var(--spacing-lg);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xxl);
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  color: var(--footer-text);
+  position: relative;
+  padding-bottom: var(--spacing-xs);
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--color-primary);
+}
+
+.footer-address {
+  font-style: normal;
+  line-height: 1.7;
+  color: var(--footer-text-muted);
+  font-size: var(--font-size-base);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-links a {
+  color: var(--footer-text-muted);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
+  transform: translateX(5px);
+  text-decoration: none;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+.newsletter-form input {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--footer-border);
+  border-radius: var(--radius-sm);
+  background: var(--footer-input-bg);
+  color: var(--footer-text);
+  font-size: var(--font-size-base);
+  width: 100%;
+}
+
+.newsletter-form input::placeholder {
+  color: #888;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: #333;
+}
+
+.btn-submit {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  width: fit-content;
+  min-width: 100px;
+}
+
+.btn-submit:hover {
+  background: var(--color-primary-hover);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--footer-border);
+  padding-top: var(--spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.copyright p {
+  color: var(--footer-text-muted);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.footer-bottom-links a {
+  color: var(--footer-text-muted);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: color var(--transition-fast);
+}
+
+.footer-bottom-links a:hover {
+  color: var(--color-primary);
+}
+
+.separator {
+  color: var(--footer-border);
+}
+
+/* ========================================
+   16. UTILITY CLASSES
+   ======================================== */
+.line-heading {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.line-heading h2 {
+  font-size: var(--font-size-xxxl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.line {
+  width: 80px;
+  height: 4px;
+  background: var(--color-primary);
+  margin: 0 auto;
+}
+
+/* ========================================
+   17. MEDIA QUERIES
+   ======================================== */
+
+/* Large Tablet Styles */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+  }
+  
+  .career-grid {
+    gap: var(--spacing-xl);
+  }
+}
+
+/* Tablet Styles */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+  }
+  
+  .form {
+    max-width: 100%;
+  }
+  
+  .testimonial-box1 {
+    flex-direction: column;
+  }
+  
+  .overview-content {
+    flex-direction: column;
+  }
+  
+  .facility .facility-content {
+    flex-direction: column;
+  }
+  
+  .reason-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .career-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .reason-content,
+  .career-content {
+    text-align: center;
+  }
+  
+  .reason-heading .line,
+  .career .line {
+    margin: 0 auto;
+  }
+}
+
+/* Mobile Landscape Styles */
+@media (max-width: 768px) {
+  :root {
+    --font-size-xxl: 1.8rem;
+    --font-size-xxxl: 2rem;
+  }
+  
+  .footer-grid {
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-title {
+    font-size: var(--font-size-md);
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .nav-items {
+    display: none;
+  }
+  
+  .first-header {
+    font-size: var(--font-size-xl);
+  }
+  
+  .hero-section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .hero {
+    gap: var(--spacing-md);
+  }
+  
+  .benefits {
+    flex-direction: column;
+  }
+  
+  .form-1 .name-row {
+    flex-direction: column;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .footer-col {
+    text-align: center;
+  }
+  
+  .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .newsletter-form {
+    align-items: center;
+  }
+  
+  .btn-submit {
+    width: 100%;
+  }
+  
+  .footer-bottom-links {
+    justify-content: center;
+  }
+  
+  .grid-container {
+    flex-direction: column;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .branding-title p {
+    display: none;
+  }
+  
+  .testimonial-content {
+    min-width: 100%;
+  }
+  
+  .reason-heading h2,
+  .career h2.support {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 380px) {
+  .footer-bottom-links {
+    flex-wrap: wrap;
+  }
+  
+  .separator {
+    display: none;
+  }
+  
+  .footer-bottom-links a {
+    width: 100%;
+    text-align: center;
+    padding: var(--spacing-xs) 0;
+  }
+}
+
+/* ========================================
+   END OF STYLESHEET
+   ======================================== */
